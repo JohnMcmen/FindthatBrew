@@ -1,0 +1,225 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(315deg, rgba(103, 73, 40, 1) , rgba(124, 95, 53, 1) , rgba(148, 122, 84, 1) , rgba(179, 158, 106, 1) );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+.title-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px; /* Rounds the corners */
+  padding: 1px; /* Adds padding inside the container around your title */
+  color: white; /* Sets the text color to white */
+  text-align: center; /* Centers the text inside the container */
+  width: 100%; /* Ensures the width is as wide as the content plus padding */
+  margin: 0 auto; /* Centers the container horizontally */
+  margin-top: 10px; /* Adds space at the top of the page or its parent container */
+  font-size: 15px; /* Sets the font size */
+  font-family: Arial, sans-serif; /* Sets the font family */
+}
+
+.breweries-list {
+  list-style-type: none;
+  padding: 0;
+  order: 1;
+}
+
+.breweries-list,
+.chart-container {
+  flex: 1; /* Make both containers take up equal space */
+}
+
+@media (max-width: 768px) {
+  .info-containers {
+    flex-direction: column; /* Stack containers vertically on smaller screens */
+  }
+}
+
+.header-row {
+  display: flex;
+  font-weight: bold; /* Makes the header text bold */
+  padding: 10px 5px; /* Adds some padding */
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.4); /* Sets the background color */
+  border-radius: 10px; /* Rounds the corners */
+}
+
+.header {
+  flex: 1;
+  text-align: center;
+}
+
+.brewery-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.column {
+  flex: 1;
+  padding: 5px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px; /* Rounds the corners */
+  padding: 1px; /* Adds padding inside the container around your title */
+  color: white; /* Sets the text color to white */
+  text-align: center; /* Centers the text inside the container */
+  width: 100%; /* Ensures the width is as wide as the content plus padding */
+  margin: 0 auto; /* Centers the container horizontally */
+  margin-top: 10px; /* Adds space at the top of the page or its parent container */
+  font-family: Arial, sans-serif; /* Sets the font family */
+}
+
+.column.name a,
+.column.name a:visited, /* Visited links */
+.column.name a:hover, /* User hovers */
+.column.name a:active { /* Active links */
+  color: white;
+  text-decoration: none; /* Optional: removes underline */
+}
+
+/* If you want the hover state to be slightly different to indicate interactivity, you can modify it */
+.column.name a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+  cursor: pointer;
+}
+
+.info-containers {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.info-box {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px; /* Rounds the corners */
+  padding: 1px; /* Adds padding inside the container around your title */
+  color: white; /* Sets the text color to white */
+  text-align: center; /* Centers the text inside the container */
+  width: 100%; /* Ensures the width is as wide as the content plus padding */
+  margin: 0 10px; /* Centers the container horizontally */
+  margin-top: 10px; /* Adds space at the top of the page or its parent container */
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.info-box a,
+.info-box a:link, /* Unvisited links */
+.info-box a:visited, /* Visited links */
+.info-box a:hover, /* User hovers over the link */
+.info-box a:active { /* Active links */
+  color: white;
+  text-decoration: none; /* Optional: removes underline */
+}
+
+.info-box a:hover {
+  text-decoration: underline; /* Optional: adds underline on hover for user interaction feedback */
+  cursor: pointer;
+}
+
+.filter {
+  margin-top: 10px;
+  margin-bottom: 20px; /* Adds space below the filter section */
+  text-align: center; /* Centers the filter in the container */
+}
+
+.filter label {
+  margin-right: 10px; /* Adds space between the label and the dropdown */
+  font-size: 16px; /* Sets the font size for the label */
+  font-weight: bold; /* Makes the label text bold */
+}
+
+.filter select {
+  padding: 5px 10px; /* Adds padding inside the dropdown */
+  font-size: 16px; /* Sets the font size for the dropdown options */
+  border-radius: 5px; /* Rounds the corners of the dropdown */
+  border: 1px solid rgba(0, 0, 0, 0.7) /* Sets the border color and width */
+}
+
+.filter select:focus {
+  outline: none; /* Removes the default focus outline */
+  border-color: #007bff; /* Changes the border color when focused */
+}
+
+.filter input {
+  padding: 5px 10px; /* Adds padding inside the input field */
+  font-size: 16px; /* Sets the font size for the input field */
+  border-radius: 5px; /* Rounds the corners of the input field */
+  border: 1px solid rgba(0, 0, 0, 0.7) /* Sets the border color and width */
+}
+
+.filter input:focus{
+  outline: none; /* Removes the default focus outline */
+  border-color: #007bff; /* Changes the border color when focused */
+}
+
+nav {
+  position: fixed; 
+  top: 0; 
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto; /* Only as wide as its content */
+}
+
+nav li {
+  margin: 0; /* Remove any default margin */
+}
+
+nav li a {
+  display: block; /* Make link fill the li */
+  text-align: center; /* Center text in the block */
+  padding: 10px 20px; /* Padding for larger click area */
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px; /* Adjust the margins as necessary */
+  margin-bottom: 20px;
+  order: 2;
+}
